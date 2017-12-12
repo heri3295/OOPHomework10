@@ -14,16 +14,15 @@ public class PlugsMain {
         main.displayFileNames(plugins);
         int pluginNum = main.getWhichPluginNum(plugins);
         String chosenPlug = plugins[pluginNum].getName();
-        System.out.println(chosenPlug);
+
         chosenPlug = chosenPlug.replace(".java", "");
-        System.out.println(chosenPlug);
         Class<?> mclass = Class.forName(chosenPlug);
         Object instance = mclass.newInstance();
         Method[] methods = mclass.getMethods();
 
         for (int i = 0; i < methods.length; i++ ) {
-            //methods[i].invoke(instance);
-            System.out.println(methods[i].toString());
+            methods[i].invoke(instance);
+            //System.out.println(methods[i].toString());
         }
     }
 

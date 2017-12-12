@@ -1,4 +1,4 @@
-package PluginsProject;
+package PluginsProject.Plugs;
 import PluginsProject.*;
 
 /**
